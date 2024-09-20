@@ -8,6 +8,10 @@ type IModalProps = {
 }
 
 const Modal = ({ active, setActive, status}: IModalProps) => {
+  // setTimeout(() => {
+  //   setActive(false)
+  // }, 500);
+
   return (
     <div className={active ? "modal active" : "modal"}>
       <div className="modal__content" onClick={e => e.stopPropagation()}>

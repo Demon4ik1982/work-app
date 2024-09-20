@@ -25,6 +25,14 @@ export const UserProfile: FC = () => {
     const [company, setCompany] = useState('')
 
     useEffect(() => {
+      if(moadalActive) {
+        const timeoutId = setTimeout(() => {
+        setModalActive(false);
+      }, 4000);
+
+      return () => clearTimeout(timeoutId);
+      }
+
       const getUserInfo = async (): Promise<void> => {
         const data = await Api.getUser(Number(userId));
         setUser(data);
@@ -37,7 +45,7 @@ export const UserProfile: FC = () => {
         setCompany(data.company.name)
       };
       getUserInfo();
-    }, [userId]);
+    }, [userId, moadalActive]);
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
       event.preventDefault();
