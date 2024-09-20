@@ -1,0 +1,23 @@
+.Button {
+  display: inline-flex;
+  padding: 12px 42px;
+  max-width: 170px;
+  height: 46px;
+  border-radius: 50px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  color: #fdfdfd;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  background: #161616;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.Button:hover {
+  background-color: #f4f4f4;
+  color: #595959;
+}
+

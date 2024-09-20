@@ -1,0 +1,32 @@
+.user-list {
+  padding-top: 40px;
+}
+
+.user-list__grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  column-gap: 40px;
+  row-gap: 32px;
+}
+
+.user-list__grid-item {
+  max-width: 360px;
+  width: 100%;
+  min-height: 168px;
+}
+
+.user-list__title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #DADADA;
+  margin-bottom: 28px;
+}
+
+.user-list__loading-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  align-items: center;
+}
